@@ -1,0 +1,29 @@
+v0.1 12Sept2014 -- First commit
+
+Description:
+This project provides code that can be used to solve the problems listed at https://projecteuler.net/problems.
+
+To run:
+- Copy the relevant module locally
+- import the relevant module ("problem1, problem2 etc...") into your python class like so
+	import problem1
+- run the script with module's run method like so:
+	problem1.run(<relevant arguements>)
+
+To test:
+- Locally copy all the files in this project
+- run the following: python test.py
+
+Important notes:
+- Adhering with the intentions of the site https://projecteuler.net/, the following programs are NOT meant to publish the solutions of the problems. 
+- Instead, they publish the programmatic steps I have used to get to the solutions of the problems.
+- On running the modules with the right input arguments, you will be able to see the solutions of the problems and be able to complete the Euler Problems Challenge.
+- However, I do NOT recommend doing this unless you have tried to solve the problems yourselves first. The code here meant as a source of hints for people who are stuck.
+- Further, keeping with the intentions of the site, I request that you do not publish the solutions you recieve from running these programs. Please let others have the fun of figuring it out themselves.
+- I do recommend running the test cases. They solve the problems for different input values.
+
+Finally, my solutions are far from perfect, so feel free to use and modify as you please. Just make sure not to ruin the fun for others.
+
+Thanks and happy mathing!
+Cheers
+Skanda 
