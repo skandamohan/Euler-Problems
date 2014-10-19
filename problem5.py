@@ -1,33 +1,36 @@
 '''https://projecteuler.net/problem=5'''
 '''Please see the README document for details'''
 
+import math
+
 def run(upper_bound):
-	upper_bound = upper_bound+1
+	primes = find_primes_under(upper_bound) 
+	divisors = []
 	result = 1
-	highest_common_multiples = []
-	for counter in range (2,upper_bound,1):
-		for inner_counter in range(2,counter):
-			print "counter = "+str(counter)+" inner_counter = "+str(inner_counter)
-			if(counter%inner_counter == 0):
-				if inner_counter in highest_common_multiples:
-					highest_common_multiples.remove(inner_counter)
-		if counter not in highest_common_multiples:
-			highest_common_multiples.append(counter)
-	print highest_common_multiples
-	for counter in highest_common_multiples:
+	for counter in primes:
+		highest_power = 1
+		while(math.pow(counter,highest_power+1)<upper_bound):
+			highest_power = highest_power+1
+		divisors.append(int(math.pow(counter,highest_power)))
+	print divisors
+	for counter in divisors:
 		result = result * counter
-		highest_common_multiples.remove(counter)
-		for inner_counter in highest_common_multiples:
-			if(result%inner_counter == 0):
-				highest_common_multiples.remove(inner_counter)
-	for counter in highest_common_multiples:
-		result = result*counter
-	#print "Initial result: "+ str(result)
-	#for counter in highest_common_multiples:
-	#	while((result/counter)%counter == 0):
-	#		result = result/counter
-	print "Lowest common multiple between all the numbers below "+str(upper_bound)+" is "+str(result)
-	print "https://projecteuler.net/problem=5 - END ----------------"
+	print "Lowest common multiple for all values under "+str(upper_bound)+" is "+str(result)
+
+
+def find_primes_under(limit):
+	prime_list = []
+	if limit < 2:
+		print "Number under 2. No prime numbers available."
+		return prime_list
+	for counter in range (2, limit+1):
+		if not prime_list:
+			prime_list.append(counter)
+		else:
+			if not any(counter%x == 0 for x in prime_list):
+				prime_list.append(counter)
+	print prime_list
+	return prime_list
 
 if __name__  == "__main__":
         print "https://projecteuler.net/problem=5"
