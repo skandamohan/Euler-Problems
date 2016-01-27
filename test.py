@@ -10,6 +10,7 @@ import problem6
 import problem8
 #import problem9
 #import problem11
+import problem30
 import problem39
 
 underline = '\033[4m'
@@ -42,8 +43,10 @@ print underline+"Problem 14"+end
 print underline+"Problem 15"+end
 print underline+"Problem 16"+end
 print underline+"Problem 17"+end
+print underline+"Problem 30"+end
+print problem30.run(5)
 print underline+"Problem 39"+end
-print problem39.run(1000)
+print problem39.run(100)
 
 
 

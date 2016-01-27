@@ -44,4 +44,4 @@ def check_square_law(a,b,c):
 	
 
 if __name__  == "__main__":
-        print "https://projecteuler.net/problem=9"
+        print "https://projecteuler.net/problem=39"
